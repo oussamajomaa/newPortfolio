@@ -1,0 +1,604 @@
+*{padding: 0; margin: 0;}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    position: relative;
+}
+
+h1{
+    color: white;
+    font-size: 3.5vw;
+}
+
+h2{
+    margin-bottom: 10px;
+    font-size: 2.5vw;
+    color: white;
+}
+
+/* **************** la nav side **************** */
+
+#navMenu{
+    z-index: 9999;
+    width: 4%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    top: 30%;
+    left: 0;
+    transition: .5s ease-in-out;
+}
+
+#navMenu img{
+    width:100%; 
+}
+
+#navMenu a{
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navMenu span{
+    display: none;
+    background-color: white;
+}
+
+#navContact{
+    z-index: 9999;
+    width: 4%;
+    display: flex;
+    flex-flow: column;
+    align-items: right;
+    box-sizing: border-box;
+    position: fixed;
+    top: 30%;
+    right: 0;
+    transition: .5s ease-in-out;
+}
+
+#navContact img{
+    width: 100%;
+}
+
+#telephone{
+    display: none;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    position: fixed;
+    top: 31%;
+    right: 4%;
+    border-radius: 5%;
+}
+
+#email{
+    display: none;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+    position: fixed;
+    top: 38%;
+    right: 4%;
+    border-radius: 5%; 
+}
+
+#menuToggle{
+    display: none;
+}
+
+/* **************** fin nav side **************** */
+
+
+/* **************** début main **************** */
+
+main{
+    display: flex;
+    flex-flow: column;
+}
+
+/* **************** début des sections **************** */
+section {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+header{
+    margin: 2%;
+}
+
+/* **************** section accueil **************** */
+#accueil{
+    background: #233142;
+}
+
+#accueil footer a{
+    text-decoration: none;
+    color: yellow;
+    font-style: italic;
+    font-size: 2vw ;
+}
+
+#accueil article{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;    
+    box-sizing: border-box;
+    margin: 1%;
+}
+
+#accueil article h2{
+    text-align: center;
+}
+
+#accueil .article1 div{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    box-sizing: border-box;
+}
+
+#accueil article div #myImage{
+    width:60%;
+    border-radius: 50%; 
+}
+
+
+#accueil article div p{
+    font-size: 1.75vw;
+    text-align: center;
+    margin-top: 2%;
+    color: white;
+}
+#accueil article div span{
+    font-weight: bolder;
+} 
+
+#accueil article .contact{
+    width: 90%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+
+/* **************** fin section accueil **************** */
+
+/* **************** section compétences **************** */
+
+#competence{
+    background: #4f9da6;
+    justify-content: space-around;
+}
+
+#competence article{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%; 
+    box-sizing: border-box; 
+    height: 100%; 
+
+} 
+
+#competence article .child1{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    height:60%;
+    box-sizing: border-box;
+}
+
+#competence article .child1 .allcard{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#competence article .child1 .allcard .card{
+    transition: .5s ease; 
+    width: 100%;
+
+}
+
+#competence article .child1 .allcard .card img{
+    display: block;
+    margin: auto;
+    width: 30%;
+
+}
+
+#competence #maternelle, #competence #courant, #competence #bien{
+    display: none; 
+}
+
+#competence article .child2{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#competence article .child2 .allcard{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+#competence article .child2 .allcard .progressImage{
+    width: 10%;
+    box-sizing: border-box;
+
+}
+
+
+#competence article .child2 .allcard .icon{
+    width: 100%;
+}
+
+#competence article .child2 .allcard .icon img{
+    width: 75%;
+    display: block;
+    margin: auto;
+}
+
+#competence article .child2 .allcard .myProgress{
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    visibility: hidden;
+    border-radius: 5%;
+}
+
+#competence article .child2 .allcard .myProgress div{
+    width: 1%;
+    height: 20px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    border-radius: 5%;
+}
+
+#competence article .child2 h2{
+    text-align: center;
+}
+
+.skew{
+    animation: skew 1s infinite;
+    transform: skew(10deg);
+    animation-direction: alternate;
+}
+
+@keyframes skew {
+    0% {transform: skew(10deg); color: black;}
+    /* 25% { color: white;}
+    25% { color: black;} */
+     100% {transform: skew(-10deg); color: white;}
+}
+
+/* @keyframes skew1 {
+    0% {transform: skew(10deg);}
+     100% {transform: skew(-10deg);}
+} */
+
+/* **************** fin section compétences **************** */
+
+
+
+/* **************** section formations **************** */
+
+#formation{
+    background: #facf5a;
+}
+
+#formation article{
+    width: 80%;
+    height: 100%; 
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row;
+}
+
+#formation article div{
+    /* box-sizing: border-box; */
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+#formation article div button{
+    display: none;
+    font-size: 1.5vw;
+    height: 20%;
+}
+
+#formation article div .btn{
+    display: inherit;
+    background-color: #233142;
+    justify-content: center;
+    color: white;
+}
+
+#formation article div button img{
+    width:50%;
+}
+
+/* **************** fin section formations **************** */
+
+
+
+/* **************** section expériences **************** */
+
+#experience{
+    background: #ff5959;
+}
+
+/* **************** fin section expériences **************** */
+
+
+/* **************** section portfolio **************** */
+
+#portfolio{
+    background: #233142;
+}
+
+/* **************** fin section portfolio **************** */
+
+
+/* **************** media query **************** */
+
+@media screen and (max-width: 1000px){
+
+}
+
+@media screen and (max-width: 800px){
+
+    /* nav{
+        z-index: 9999;
+        width: 100%;
+        height: 10%;
+        background-color: rgb(7, 7, 7);
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row;
+        align-items: center;
+        box-sizing: border-box;
+        position: fixed;
+        transition: .5s ease-in-out;
+    }
+
+    nav img{
+        width: 30%;
+        display: block; 
+        margin: auto;
+    }
+    #menu{
+       visibility: hidden;
+    } */
+
+
+/* **************** début burger **************** */
+#navMenu{
+    display: none;
+}
+
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  width: 80%;
+
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  cursor: pointer;
+  opacity: 0; 
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+#menuToggle .span{
+    position: absolute;
+}
+
+#menuToggle .span span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle .span span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle .span span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#burger
+{
+  position: absolute;
+  width: 30vw;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  /* opacity: .5; */
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#burger a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+#burger li{
+  padding: 10px 0;
+  font-size: 22px;
+  border-bottom: 3px solid rgb(160, 156, 156);
+  cursor: pointer;
+}
+
+/* #burger li:focus{
+    background-color: black;
+} */
+
+#menuToggle input:checked ~ ul{
+  transform: none;
+}
+
+/* **************** fin burger **************** */
+
+
+    section{
+        height: auto;
+    }
+
+    #accueil footer{
+        margin: 1%;
+    }
+
+       #accueil article{
+        flex-flow: column;
+    }
+
+    #navContact{
+        display: none;
+    }
+    #accueil article .contact{
+        
+            width: 90%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: center;
+
+    }
+
+    #accueil article div p{
+        font-size: 3vw;
+    }
+
+    #accueil .article1 div, #accueil article .contact{
+        width: 80%;
+        margin: 2%;  
+    }
+
+    #accueil article div{
+        width: 80%;
+        margin: 2%;
+    }
+
+    #competence article .child1 .allcard{
+        flex-flow: column;
+    }
+    #competence article .child1 .allcard .card{
+        transition: .5s ease; 
+        width: 50%;
+        margin: 2%;
+    }
+    #competence article .child1 .allcard .card img{
+        width: 30%;
+    }
+    #competence article .child2 .allcard{
+        flex-flow: column;
+        align-items: center;
+    }
+    #competence article .child2 .allcard .progressImage{
+        width: 20%;
+        box-sizing: border-box;
+        margin: 2%;
+    }
+
+    /* #competence article .child2 .allcard .progressImage img{
+        width: 20%;
+    }  */
+
+    #formation article {
+        flex-flow: column;
+        align-items: center;
+    }
+    #formation article div{
+        width: 75%;
+        margin-bottom: 1em;
+    }
+    #formation article div button{
+        display: none;
+        font-size: 3vw;
+        height: 20%;
+    }
+
+}

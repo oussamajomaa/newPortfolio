@@ -1,0 +1,267 @@
+*{padding: 0; margin: 0;}
+html{
+    scroll-behavior: smooth;
+    transition:scroll-behavior 2s ease-in all;
+}
+body{
+
+    position: relative;
+}
+body h3{
+    position: fixed; 
+    left: 90px; 
+    top: 20px;
+    width: 100%;
+    color: white;
+
+}
+
+
+h1{
+    color: white;
+    font-size: 36px;
+}
+
+h2{
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: white;
+}
+
+/* **************** la nav side **************** */
+
+nav{
+    z-index: 9999;
+    width: 5%;
+    height: 100vh;
+    background-color: rgb(7, 7, 7);
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+    align-items: center;
+    box-sizing: border-box;
+    position: fixed;
+    transition: .5s ease-in-out;
+}
+
+nav img{
+    width: 50%;
+    height: 50%;
+    display: block; 
+    margin: auto;
+}
+
+nav img:hover ~span{
+    visibility: visible;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+}
+
+span{
+    visibility: hidden;
+    color: white;
+}
+
+/* **************** fin nav side **************** */
+
+/* **************** début main **************** */
+
+main{
+    display: flex;
+    flex-flow: column;
+}
+
+/* **************** début des sections **************** */
+section {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: stretch;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* **************** section accueil **************** */
+#accueil{
+    background: #a74949;
+}
+
+#accueil .myImage{
+    width:100%;
+    border-radius: 50%; 
+}
+
+footer, header{
+    margin: 2%;
+}
+
+#accueil footer a{
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+
+#accueil article{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+    box-sizing: border-box;
+}
+
+#accueil article h2{
+    text-align: center;
+}
+
+#accueil article div{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#accueil article div :nth-child(2){
+    flex-flow: column;
+}
+
+#accueil article div p{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 3%;
+    color: white;
+}
+#accueil article div span{
+    font-weight: bolder;
+}
+
+/* **************** fin section accueil **************** */
+
+/* **************** section compétences **************** */
+
+#competence{
+    background: #7da557;
+    justify-content: space-around;
+}
+
+#competence article{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; 
+    box-sizing: border-box; 
+    height: 100%; 
+} 
+
+#competence article .child1{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    height:40%;
+}
+
+#competence article .child1 .allcard{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#competence article .child1 .allcard .card{
+    transition: .5s ease; 
+    width: 100%;
+}
+
+#competence article .child1 .allcard .card img{
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+#maternelle, #courant, #bien{
+    display: none;   
+}
+
+#competence article .child2{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(177, 56, 8);
+}
+
+#competence article .child2 .allcard{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+#competence article .child2 .allcard img{
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto;
+}
+
+#competence article .child2 h2{
+    text-align: center;
+}
+
+.skew{
+    animation: skew 1s infinite;
+    transform: skew(10deg);
+    animation-direction: alternate;
+}
+@keyframes skew {
+    0% {transform: skew(10deg);}
+     100% {transform: skew(-10deg);}
+}
+
+/* **************** fin section compétences **************** */
+
+
+
+/* **************** section formations **************** */
+
+#formation{
+    background: #eed27a;
+}
+
+/* **************** fin section formations **************** */
+
+
+
+/* **************** section expériences **************** */
+
+#experience{
+    background: #60b28f;
+}
+
+/* **************** fin section expériences **************** */
+
+
+/* **************** section portfolio **************** */
+
+#portfolio{
+    background: #e7a7b1;
+}
+
+/* **************** fin section portfolio **************** */
+
+
