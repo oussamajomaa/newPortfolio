@@ -1,8 +1,6 @@
 *{padding: 0; margin: 0;}
-html{
-    scroll-behavior: smooth;
 
-}
+
 body{
     position: relative;
 }
@@ -153,8 +151,8 @@ header{
 }
 
 #accueil article div #myImage{
-    width:60%;
-    border-radius: 50%; 
+    width:70%;
+    border-radius: 80%; 
 }
 
 
@@ -182,7 +180,7 @@ header{
 /* **************** section compétences **************** */
 
 #competence{
-    background: #4f9da6;
+    background: #4b5f57;
     justify-content: space-around;
 }
 
@@ -360,6 +358,67 @@ header{
     background: #ff5959;
 }
 
+#experience article{
+    width: 80%;
+    
+}
+#experience article>button{
+    width: 100%;
+    height: 5vw;
+    font-size: 2vw;
+    font-weight: bolder;
+    position: relative;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .5vh;
+    margin-top: .5vh;
+}
+
+#experience article>button span{
+    font-size: 3vw; 
+    color: #ff5959;
+    position: absolute;
+    right: 0;
+}
+
+
+#admin , #admin1{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#experience article #admin button, #experience article #admin1 button{
+    font-size: 2vw;
+    border: none;
+    margin-bottom: .5vh;
+    margin-top: .5vh;
+    height: 1.5em;
+}
+
+#admin div:nth-child(1), #admin1 div:nth-child(1){
+    width: 28%;
+    
+}
+
+#admin div:nth-child(2), #admin1 div:nth-child(2){
+    width: 68%;
+}
+
+#experience article>div div{
+    display: flex;
+    flex-flow: column;
+}
+
+#admin, #admin1{
+    display: none;
+}
+
 /* **************** fin section expériences **************** */
 
 
@@ -405,6 +464,11 @@ header{
 
 
 /* **************** début burger **************** */
+
+html{
+    scroll-behavior: smooth;
+}
+
 #navMenu{
     display: none;
 }
@@ -507,7 +571,7 @@ header{
 
 #burger li{
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 3vw;
   border-bottom: 3px solid rgb(160, 156, 156);
   cursor: pointer;
 }

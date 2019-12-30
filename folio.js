@@ -30,24 +30,8 @@ let ic = document.querySelectorAll('.ic');
 let icImg = document.querySelectorAll('.ic img');
 let aSpan = document.querySelectorAll('#navMenu span');
 let fade = document.querySelectorAll('.fade');
-let btn=document.querySelectorAll('.btn');
+let btn = document.querySelectorAll('.btn');
 
-
-
-for (let i = 0; i < icImg.length; i++) {
-    icImg[i].addEventListener('mouseover', function () {
-        $(icImg[i]).css('transform', 'translate(50px, 0) scale(1.5)');
-        icImg[i].style.transition = '1s ease-in-out';
-    });
-
-    icImg[i].addEventListener('mouseout', function () {
-        icImg[i].style.transform = 'scale(1)';
-        icImg[i].style.transition = '1s ease'
-
-    })
-
-
-}
 
 tel.addEventListener('mouseover', function () {
     $('#telephone').fadeIn('slow');
@@ -65,86 +49,56 @@ mail.addEventListener('mouseout', function () {
     $('#email').fadeOut('slow');
 });
 
+$(ic).click(function () {
+    $(section).hide()
+    $(section).fadeIn()
+})
 
-accueil.addEventListener('click', function () {
-    $('#accueil').slideDown('slow');
-});
-
-competence.addEventListener('click', function () {
-    $('#competence').slideDown('slow');
-});
 
 function showFront(front, back) {
-    $(front).slideUp('slow');
+    $(front).hide();
     back.style.display = 'inherit';
-    $(back).slideDown('slow');
+    $(back).fadeIn('slow');
     back.style.display = 'inherit';
 };
 
 function showBack(front, back) {
-    $(front).slideDown('slow');
-    $(back).slideUp('slow');
+    $(front).fadeIn('slow');
+    $(back).hide();
 };
 
-arabe.addEventListener('mouseover', function () { showFront(arabe, maternelle) });
-maternelle.addEventListener('mouseout', function () { showBack(arabe, maternelle) });
+arabe.addEventListener('mouseover', function () {
+    showFront(arabe, maternelle) 
+});
+maternelle.addEventListener('mouseout', function () {
+    showBack(arabe, maternelle) 
+});
 
-francais.addEventListener('mouseover', function () { showFront(francais, courant) });
-courant.addEventListener('mouseout', function () { showBack(francais, courant) });
+francais.addEventListener('mouseover', function () {
+    showFront(francais, courant) 
+});
+courant.addEventListener('mouseout', function () {
+    showBack(francais, courant) 
+});
 
-anglais.addEventListener('mouseover', function () { showFront(anglais, bien) });
-bien.addEventListener('mouseout', function () { showBack(anglais, bien) });
+anglais.addEventListener('mouseover', function () {
+    showFront(anglais, bien) 
+});
+bien.addEventListener('mouseout', function () {
+    showBack(anglais, bien) 
+});
 
 
-for (let i=0;i<btn.length;i++){
-    $(btn[i]).mouseover(function(){
-        let brother=$(btn[i]).siblings(); // selectionner les frères
-        for (let j=0;j<brother.length;j++){
-            $(brother[j]).fadeIn('slow');
-        }
+
+
+for (let i = 0; i < btn.length; i++) {
+    $(btn[i]).mouseover(function () {
+        $(this).siblings().fadeIn('slow'); // selectionner les frères
     });
-    $(btn[i]).mouseout(function(){
-        let brother=$(btn[i]).siblings();
-        for (let j=0;j<brother.length;j++){
-            $(brother[j]).fadeOut('slow');
-        }
+    $(btn[i]).mouseout(function () {
+        $(this).siblings().fadeOut('slow');
     });
 }
-
-
-
-
-
-
-
-// let navWidth = $('nav').width();
-// window.addEventListener('mousemove', function (e) {
-//     let wBody=screen.width;
-//     if (wBody> 800) {
-//         let x = e.clientX;
-//         if (x < 80) {
-//             nav.style.transform = 'translateX(0)';
-//             $('#menu').slideUp('slow');
-//         }
-//         else {
-//             nav.style.transform = 'translateX(-100%)';
-//             $('#menu').slideDown('slow');
-//         }
-//     }
-//     else{
-//         let y = e.clientY;
-//         if (y < 80) {
-//             nav.style.transform = 'translateY(0)';
-//             $('#menu').slideUp('slow');
-//         }
-//         else {
-//             nav.style.transform = 'translateY(-100%)';
-//             $('#menu').slideDown('slow');
-//         }
-//     }
-// });
-
-
 
 let childImg = document.querySelectorAll('.child2 img');
 let myProgress = document.querySelectorAll('.myProgress');
@@ -175,6 +129,9 @@ for (let i = 0; i < childImg.length; i++) {
         }
     });
 }
+
+
+
 for (let i = 0; i < childImg.length; i++) {
     childImg[i].addEventListener('mouseout', function () {
         childImg[i].style.transition = "2s ease";
@@ -197,44 +154,41 @@ function move(e, p) {
             } else {
                 w++;
                 elem.style.width = w + "%";
-                elem.innerHTML = w + "%";
+                elem.textContent = w + "%";
             }
         }
     }
 }
+let btnSpan=document.querySelector('#btnAdmin span');
+let indice=1;
+let admin=document.querySelector('#admin');
+$('#btnAdmin').click(function(){
+    if (indice%2){
+        btnSpan.innerHTML='&#9650;'
+    }
+    else{
+        btnSpan.innerHTML='&#9660;'
+    }
+    
+    $(admin).slideToggle('slow');
+    admin.style.display='flex';
+    admin.style.flexFlow='row';
+    indice++;  
+})
 
-
-
-// let indice = 1;
-
-// show(indice); // faire apparaître le premier élément
-
-// document.getElementById('btn-left').addEventListener('click', function () {
-//     indice -= 1;
-//     show(indice);
-// })
-// document.getElementById('btn-right').addEventListener('click', function () {
-//     indice += 1;
-//     show(indice);
-// })
-
-// function show(n) {
-
-//     let x = document.getElementsByClassName("slide");
-
-//     if (n > x.length) {
-//         indice = 1
-//     }
-
-//     if (n < 1) {
-//         indice = x.length // indice = 5
-//     }
-
-//     for (let i = 0; i < x.length; i++) {
-//         x[i].style.visibility = "hidden"; // faire dispparaître tous les éléments
-
-//     }
-
-//     x[indice - 1].style.visibility = "visible"; // faire apparaître l'élément selon l'indice
-
-// }
+let btnSpan1=document.querySelector('#btnAdmin1 span');
+let indice1=1;
+let admin1=document.querySelector('#admin1');
+$('#btnAdmin1').click(function(){
+    if (indice1%2){
+        btnSpan1.innerHTML='&#9650;'
+    }
+    else{
+        btnSpan1.innerHTML='&#9660;'
+    }
+    
+    $(admin1).slideToggle('slow');
+    admin1.style.display='flex';
+    admin1.style.flexFlow='row';
+    indice1++;  
+})
