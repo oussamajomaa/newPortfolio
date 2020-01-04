@@ -159,6 +159,8 @@ function move(e, p) {
         }
     }
 }
+
+
 let btnSpan=document.querySelector('#btnAdmin span');
 let indice=1;
 let admin=document.querySelector('#admin');
@@ -171,8 +173,10 @@ $('#btnAdmin').click(function(){
     }
     
     $(admin).slideToggle('slow');
-    admin.style.display='flex';
-    admin.style.flexFlow='row';
+    $(admin).css('display', 'flex');
+    $(admin).css('flexFlow', 'row');
+    // admin.style.display='flex';
+    // admin.style.flexFlow='row';
     indice++;  
 })
 
@@ -191,4 +195,17 @@ $('#btnAdmin1').click(function(){
     admin1.style.display='flex';
     admin1.style.flexFlow='row';
     indice1++;  
+})
+
+
+$('#menuBurger').click(function(){
+    $(this).hide('slow');
+    $('#close').show('slow');
+    $('#menuToggle').show('slow')
+})
+
+$('#close').click(function(){
+    $(this).hide();
+    $('#menuBurger').show('slow');
+    $('#menuToggle').hide('slow')
 })
