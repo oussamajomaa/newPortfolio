@@ -209,3 +209,9 @@ $('#close').click(function(){
     $('#menuBurger').show('slow');
     $('#menuToggle').hide('slow')
 })
+
+$('section').click(function(){
+    $('#close').hide('slow');
+    $('#menuToggle').hide('slow');
+    $('#menuBurger').show('slow')
+})

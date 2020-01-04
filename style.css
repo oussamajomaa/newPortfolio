@@ -369,7 +369,7 @@ header{
 }
 #experience article>button{
     width: 100%;
-    /* height: 6vw; */
+    height: 7vw;
     font-size: 2vw;
     font-weight: bolder;
     position: relative;
@@ -386,6 +386,7 @@ header{
     color: #ff5959;
     position: absolute;
     right: 0;
+
 }
 
 
@@ -495,6 +496,7 @@ html{
 
 
 
+
 /* **************** fin burger **************** */
 h1{
     font-size: 5vw;
@@ -512,7 +514,7 @@ h2{
         margin: 1%;
     }
 
-       #accueil article{
+    #accueil article{
         flex-flow: column;
     }
 
@@ -564,9 +566,6 @@ h2{
         margin: 2%;
     }
 
-    /* #competence article .child2 .allcard .progressImage img{
-        width: 20%;
-    }  */
 
     #formation article {
         flex-flow: column;
